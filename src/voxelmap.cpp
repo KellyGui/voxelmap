@@ -37,7 +37,7 @@ void VoxelMap::addMap(std::string &pc_file, int zone)
         {
             liblas::Point const& p = reader.GetPoint();
             // 将点云里的点插入到octomap中
-            octomap::point3d tmpp =  octomap::point3d(p.GetX()+flag*ZONE_DIST-center(0), p.GetY()-center(1), p.GetZ()-center(2));
+            octomap::point3d tmpp =  octomap::point3d(p.GetX()+flag*ZONE_DIST-center(0), p.GetY()-center(1), p.GetZ() );
             tree->updateNode( tmpp, true );
         }
 
@@ -47,7 +47,7 @@ void VoxelMap::addMap(std::string &pc_file, int zone)
         {
             liblas::Point const& p = reader.GetPoint();
             // 将点云里的点插入到octomap中
-            octomap::point3d tmpp =  octomap::point3d(p.GetX()-center(0), p.GetY()-center(1), p.GetZ()-center(2));
+            octomap::point3d tmpp =  octomap::point3d(p.GetX()-center(0), p.GetY()-center(1), p.GetZ() );
             tree->updateNode( tmpp, true );
         }
 

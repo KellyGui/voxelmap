@@ -9,4 +9,4 @@ To build in C++ version, you need to modify the CMakeLists.txt by comment the se
    $ make
 ```
 ### Build with Pybind11
-Since it need the support of python interpreter, we recommend you to build it with g++ command by setting all needed including directories and linked libraries
+Since it needs the support of python interpreter, we recommend you to build it with g++ command by setting all needed including directories and linked libraries
